@@ -28,6 +28,6 @@ class Day02Test {
   }
 
   @Test fun part1Real() {
-    assertThat(Day02.part1(true)).isEqualTo(13439L) // but this is wrong
+    assertThat(Day02.part1(true)).isEqualTo(11603L)
   }
 }

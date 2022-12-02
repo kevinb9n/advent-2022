@@ -8,10 +8,12 @@ object Day02 {
   fun part1(real: Boolean): Long {
     var sum = 0L
     Loader.load(2, real).forEachLine {
-      val mine = letterToShape(it[0])
-      val theirs = letterToShape(it[2])
+      val theirs = letterToShape(it[0])
+      val mine = letterToShape(it[2])
       val outcome = mine.outcomeAgainst(theirs)
-      sum += mine.points + outcome.points
+      val points = mine.points + outcome.points
+      // println("$it $points")
+      sum += points
     }
     return sum
   }
